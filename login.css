@@ -1,0 +1,105 @@
+ body {
+        background: url("../source/image/background.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+    #khung{
+        width: 594px; height: 531px; top:175px; left:366px;
+        position: absolute;
+     border: 40px solid black;
+     border-image: url(../source/image/border.png) 33% round;
+     background: transparent;
+     video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+     
+    }
+}
+#nhac{
+            width: 75px; height: 61px; top:5px; left:32px;
+
+            position: absolute;
+            border: 2px solid black;
+            
+    
+}
+    #nhac img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100px;
+    }
+    audio{
+        display: none;
+    }
+    #nhac button{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       
+    }
+    #hienpass{
+                    width: 379px; height: 95px; top:163px; left:1239px;
+                    position: absolute;
+                    border: 2px solid black;
+                    border-radius: 100px;
+                    background: pink;
+                    text-align: center;
+            
+
+    }
+
+    #nhappass{
+                    width: 465px; height: 495px; top:284px; left:1194px;
+                    position: absolute;
+                    border: 2px solid black;
+                    border-radius: 100px;
+                    background: pink
+    }
+    #nhappass button{
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
+        border-radius: 100px;    
+        text-align: center;
+        margin: 10px;
+        position: relative;
+        margin-left: 35px;
+        background-color: pink;
+        color: white;
+        font-family: MyFont;
+        
+    }
+    @font-face {
+        font-family: 'MyFont';
+        src: url('../source/font/VNI-Truck.ttf') ;
+    }
+    @font-face {
+        font-family: 'MyFont2';
+        src: url('../source/font/CutiePatootieHollow-BpZG.ttf') ;
+    }
+    #pass{
+        width: 100%;
+        height: 100%;
+        font-size: 50px;
+        font-family: MyFont;
+        color: white;
+        position: relative;
+        top: 15px;
+        border-radius: 100px;
+        text-align: center;
+        background-color: pink;
+        
+        
+    }
+    #nhapsai{
+        width: 1043px;
+        height: 713px;
+        top: 40%;
+        left: 22%;
+        position: relative;
+        justify-content: center;
+        border: 5px solid black;
+        background-color: white;
+    }
