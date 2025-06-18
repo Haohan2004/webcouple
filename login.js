@@ -3,10 +3,10 @@ let count=0;
 nhacbtn.onclick = function() {
     if (status) {
         document.querySelector("audio").pause();
-        nhacbtn.src = "../source/image/play.png";
+        nhacbtn.src = "/source/image/play.png";
     } else {
         document.querySelector("audio").play();
-        nhacbtn.src = "../source/image/pause.png";
+        nhacbtn.src = "/source/image/pause.png";
     }
     status = !status;
 }

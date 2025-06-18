@@ -73,7 +73,7 @@
     }
     @font-face {
         font-family: 'MyFont';
-        src: url('../source/font/SVN-Dancing-script.ttf') ;
+        src: url('/source/font/SVN-Dancing-script.ttf') ;
     }
    @keyframes fadeIn {
   from {
