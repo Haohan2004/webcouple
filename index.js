@@ -17,11 +17,11 @@ nhacbtn.onclick = function() {
 const thu1 = document.querySelectorAll("#homthu img");
 thu1.forEach((img) => {
     img.addEventListener("mouseover", () => {
-        img.src= "/source/image/thumo.jpg";
+        img.src= "/source/image/thumo.png";
         img.style.transform = "scale(1)";
     });
 img.addEventListener("mouseout",() => {
-            img.src = "/source/image/thudong.jpg";
+            img.src = "/source/image/thudong.png";
             img.style.transform = "scale(1)";
         });
 img.addEventListener("click", () => {
