@@ -76,7 +76,7 @@
   margin-bottom: 1px;
 }    @font-face {
         font-family: 'MyFont';
-        src: url('/source/font/SVN-Dancing-script.ttf') ;
+        src: url('source/font/SVN-Dancing-script.ttf') ;
     }
    @keyframes fadeIn {
   from {
@@ -171,7 +171,7 @@
 
  
   #noidung{
-    background: url(/source/image/bg.jpg);
+    background: url(source/image/bg.jpg);
   }
   #xemthu{
     display: flex;
