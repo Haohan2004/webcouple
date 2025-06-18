@@ -34,3 +34,18 @@ img.addEventListener("click", () => {
     box.style.display = "none";
     nhac.style.display = "block";
   }, 9000);
+  const elements = document.querySelectorAll('#tsGH, #tsTV');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('appear2');
+    } else {
+      entry.target.classList.remove('appear2'); // 👈 xoá khi kéo ra
+    }
+  });
+}, {
+  threshold: 0.5 // 50% phần tử nằm trong tầm nhìn
+});
+
+elements.forEach(el => observer.observe(el));
