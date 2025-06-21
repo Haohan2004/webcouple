@@ -16,18 +16,16 @@ nhacbtn.onclick = function() {
 }
 const thu1 = document.querySelectorAll("#homthu img");
 thu1.forEach((img) => {
-    img.addEventListener("mouseover", () => {
-        img.src= "source/image/thumo.png";
-        img.style.transform = "scale(1)";
-    });
-img.addEventListener("mouseout",() => {
-            img.src = "source/image/thudong.png";
-            img.style.transform = "scale(1)";
-        });
-img.addEventListener("click", () => {
+
+img.addEventListener("click", (e) => {
             const hienthu = document.getElementById("hienthu");
-        
+            const noidung = document.getElementById("noidung");
+            document.getElementById("thu").src=`source/image/${img.id}.png`;
             hienthu.style.display = "block";
+            noidung.style.filter="blur(5px)";
+document.body.style.overflow = "hidden";
+img.src= "source/image/thumo.png";
+img.style.pointerEvents = "none";
         });
     });
      setTimeout(() => {
@@ -49,3 +47,18 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 elements.forEach(el => observer.observe(el));
+
+const hienthu = document.getElementById("hienthu");
+const thuImg = document.getElementById("thu");
+const noidung1 = document.getElementById("noidung");
+
+// Tắt popup nếu click ra ngoài ảnh
+hienthu.addEventListener("click", (e) => {
+ if (e.target === thuImg)
+ {
+    hienthu.style.display = "none";
+    noidung1.style.filter = "none";
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
+  }
+});
