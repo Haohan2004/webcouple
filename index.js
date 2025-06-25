@@ -62,3 +62,65 @@ hienthu.addEventListener("click", (e) => {
     document.documentElement.style.overflow = "";
   }
 });
+function bonk() {
+  const bat = document.getElementById('bat');
+  const bonkText = document.getElementById('bonk-text');
+ const bonkSound = document.getElementById("bonk-sound");
+  // Vung gậy thẳng mặt Small Doge
+  bat.style.transform = 'rotate(20deg) translate(60px, 40px)';
+  bonkText.style.opacity = 1;
+
+  bonkSound.currentTime = 0; // về đầu
+  bonkSound.play();
+  // Quay lại sau 200ms
+  setTimeout(() => {
+    bat.style.transform = 'rotate(-45deg) translate(0, 0)';
+    bonkText.style.opacity = 0;
+  }, 200);
+}
+  const canvas = document.getElementById('scratchCanvas');
+  const ctx = canvas.getContext('2d');
+  const radius = 15;
+  let isDrawing = false;
+
+  function drawOverlay() {
+    ctx.fillStyle = '#999';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+
+  drawOverlay();
+
+  function draw(x, y) {
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Mouse events
+  canvas.addEventListener('mousedown', () => isDrawing = true);
+  canvas.addEventListener('mouseup', () => isDrawing = false);
+  canvas.addEventListener('mouseleave', () => isDrawing = false);
+  canvas.addEventListener('mousemove', (e) => {
+    if (!isDrawing) return;
+    const rect = canvas.getBoundingClientRect();
+    draw(e.clientX - rect.left, e.clientY - rect.top);
+  });
+
+  // Touch events
+  canvas.addEventListener('touchstart', (e) => {
+    isDrawing = true;
+    const rect = canvas.getBoundingClientRect();
+    const touch = e.touches[0];
+    draw(touch.clientX - rect.left, touch.clientY - rect.top);
+  });
+
+  canvas.addEventListener('touchmove', (e) => {
+    if (!isDrawing) return;
+    e.preventDefault(); // Ngăn cuộn trang khi cào
+    const rect = canvas.getBoundingClientRect();
+    const touch = e.touches[0];
+    draw(touch.clientX - rect.left, touch.clientY - rect.top);
+  });
+
+  canvas.addEventListener('touchend', () => isDrawing = false);

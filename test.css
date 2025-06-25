@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  cursor: pointer;
+}
+
+.doge {
+  position: absolute;
+  width: 200px;
+  bottom: 20px;
+}
+
+.big {
+  left: 50px;
+}
+
+.small {
+  right: 50px;
+}
+
+#bat {
+  position: absolute;
+  width: 160px;
+  top: 100px;
+  left: calc(50% + 40px); /* gần tay Big Doge */
+  transform-origin: left center;
+  transform: rotate(-45deg);
+  transition: transform 0.1s ease-out;
+}
+
+#bonk-text {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 64px;
+  color: red;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+}
