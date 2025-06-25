@@ -229,7 +229,7 @@
  #hienthu {
   position: fixed; /* gắn với màn hình hiện tại */
   top: 50%;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
   display: none;
   z-index: 999;
